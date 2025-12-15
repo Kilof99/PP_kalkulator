@@ -3,8 +3,9 @@
 class Divide : public Operation
 {
 public:
-	virtual double value();
-	virtual Expression* derivative();
+	double value();
+	Expression* derivative();
+	Divide* copy();
 	Divide(Expression* l, Expression* r);
 	Divide(Divide* origin);
 };

@@ -3,8 +3,9 @@
 class Add : public Operation
 {
 public:
-	virtual double value();
-	virtual Expression* derivative();
+	double value();
+	Expression* derivative();
+	Add* copy();
 	Add(Expression *l, Expression *r);
 	Add(Add* origin);
 };
