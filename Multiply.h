@@ -3,8 +3,9 @@
 class Multiply : public Operation
 {
 public:
-	virtual double value();
-	virtual Expression* derivative();
+	double value();
+	Expression* derivative();
+	Multiply* copy();
 	Multiply(Expression* l, Expression* r);
 	Multiply(Multiply* origin);
 };

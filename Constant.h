@@ -3,8 +3,9 @@
 class Constant : public Expression
 {
 public:
-	virtual double value();
-	virtual Expression* derivative();
+	double value();
+	Expression* derivative();
+	Constant* copy();
 	double number;
 
 	Constant(double value);
