@@ -3,9 +3,8 @@
 class Subtract : public Operation
 {
 public:
-	double value();
-	Expression* derivative();
-	Subtract* copy();
+	virtual double value();
+	virtual Expression* derivative();
 	Subtract(Expression* l, Expression* r);
 	Subtract(Subtract* origin);
 };

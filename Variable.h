@@ -3,8 +3,8 @@
 class Variable : public Expression
 {
 public:
-	double value();
-	Expression* derivative();
-	static double x;
+	virtual double value();
+	virtual Expression* derivative();
+	//static double x;
 };
 

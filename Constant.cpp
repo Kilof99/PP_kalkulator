@@ -11,7 +11,3 @@ Expression* Constant::derivative() {
 double Constant::value() {
 	return number;
 }
-
-Constant* Constant::copy() {
-	return new Constant(this->number);
-}
