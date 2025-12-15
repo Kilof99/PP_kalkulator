@@ -1,11 +1,11 @@
 #pragma once
 #include "Operation.h"
-class Add : public Operation
+class Divide : public Operation
 {
 public:
 	virtual double value();
 	virtual Expression* derivative();
-	Add(Expression *l, Expression *r);
-	Add(Add* origin);
+	Divide(Expression* l, Expression* r);
+	Divide(Divide* origin);
 };
 

@@ -9,3 +9,4 @@ Expression* Add::derivative() {
 }
 
 Add::Add(Expression *l, Expression *r) : Operation(l, r) {}
+Add::Add(Add* origin) : Operation(origin) {}

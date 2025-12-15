@@ -1,11 +1,11 @@
 #pragma once
 #include "Operation.h"
-class Add : public Operation
+class Subtract : public Operation
 {
 public:
 	virtual double value();
 	virtual Expression* derivative();
-	Add(Expression *l, Expression *r);
-	Add(Add* origin);
+	Subtract(Expression* l, Expression* r);
+	Subtract(Subtract* origin);
 };
 
