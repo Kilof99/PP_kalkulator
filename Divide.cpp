@@ -1,12 +1,18 @@
 #include "Divide.h"
+#include "Subtract.h"
+#include "Multiply.h"
 
 double Divide::value() {
 	return left->value() / right->value();
 }
 
 Expression* Divide::derivative() {
-	//return new Divide(left->derivative(), right->derivative());
-	return nullptr;
+	return new Divide(
+		new Subtract(
+			new Multiply(left->derivative(), right->copy()),
+			new Multiply(left->copy(), right->derivative())),
+		new Multiply(right->copy(), right->copy())
+	);
 }
 
 Divide* Divide::copy() {

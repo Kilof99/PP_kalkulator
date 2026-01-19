@@ -6,8 +6,10 @@ double Multiply::value() {
 }
 
 Expression* Multiply::derivative() {
-	//return new Add(new Multiply(left->derivative(), new Expression(right)), new Multiply());
-	return nullptr;
+	return new Add(
+		new Multiply(left->derivative(), right->copy()),
+		new Multiply(left->copy(), right->derivative())
+	);
 }
 
 Multiply* Multiply::copy() {
