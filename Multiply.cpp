@@ -16,5 +16,9 @@ Multiply* Multiply::copy() {
 	return new Multiply(this);
 }
 
+std::string Multiply::toString() {
+	return left->toString() + "*" + right->toString();
+}
+
 Multiply::Multiply(Expression* l, Expression* r) : Operation(l, r) {}
 Multiply::Multiply(Multiply* origin) : Operation(origin) {}

@@ -14,3 +14,7 @@ Variable::Variable() {}
 Variable* Variable::copy() {
 	return new Variable();
 }
+
+std::string Variable::toString() {
+	return "x";
+}

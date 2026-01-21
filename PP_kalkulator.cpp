@@ -8,7 +8,7 @@
 
 int main()
 {
-    Multiply test = Multiply(new Constant(14), new Variable());
-    std::cout << test.value() << std::endl;
-    std::cout << test.derivative()->value() << std::endl;
+    Divide test = Divide(new Constant(14), new Variable());
+    std::cout << test.toString() << ": " << test.value() << std::endl;
+    std::cout << test.derivative()->toString() << ": " << test.derivative()->value() << std::endl;
 }

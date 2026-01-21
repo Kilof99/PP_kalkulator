@@ -19,5 +19,9 @@ Divide* Divide::copy() {
 	return new Divide(this);
 }
 
+std::string Divide::toString() {
+	return left->toString() + "/" + right->toString();
+}
+
 Divide::Divide(Expression* l, Expression* r) : Operation(l, r) {}
 Divide::Divide(Divide* origin) : Operation(origin) {}

@@ -6,6 +6,7 @@ public:
 	double value();
 	Expression* derivative();
 	Add* copy();
+	std::string toString();
 	Add(Expression *l, Expression *r);
 	Add(Add* origin);
 };

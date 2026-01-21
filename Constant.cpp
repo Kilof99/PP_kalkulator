@@ -1,4 +1,5 @@
 #include "Constant.h"
+#include <sstream>
 
 Constant::Constant(double value) {
 	number = value;
@@ -14,4 +15,10 @@ double Constant::value() {
 
 Constant* Constant::copy() {
 	return new Constant(this->number);
+}
+
+std::string Constant::toString() {
+	std::stringstream ss;
+	ss << number;
+	return ss.str();
 }

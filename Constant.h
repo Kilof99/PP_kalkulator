@@ -6,6 +6,7 @@ public:
 	double value();
 	Expression* derivative();
 	Constant* copy();
+	std::string toString();
 	double number;
 
 	Constant(double value);
