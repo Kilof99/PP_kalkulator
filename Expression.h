@@ -4,6 +4,7 @@
 class Expression
 {
 public:
+	virtual ~Expression() = default;
 	virtual double value() = 0;
 	virtual Expression* derivative() = 0;
 	virtual Expression* copy() = 0;

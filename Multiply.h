@@ -9,5 +9,6 @@ public:
 	std::string toString();
 	Multiply(Expression* l, Expression* r);
 	Multiply(Multiply* origin);
+	virtual ~Multiply() = default;
 };
 

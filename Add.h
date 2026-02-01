@@ -9,5 +9,6 @@ public:
 	std::string toString();
 	Add(Expression *l, Expression *r);
 	Add(Add* origin);
+	virtual ~Add() = default;
 };
 

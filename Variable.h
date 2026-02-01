@@ -10,5 +10,6 @@ public:
 	static double x;
 
 	Variable();
+	virtual ~Variable() = default;
 };
 

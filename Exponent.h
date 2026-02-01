@@ -9,5 +9,6 @@ public:
 	std::string toString();
 	Exponent(Expression* l, Expression* r);
 	Exponent(Exponent* origin);
+	virtual ~Exponent() = default;
 };
 

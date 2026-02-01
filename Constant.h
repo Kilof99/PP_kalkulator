@@ -10,5 +10,6 @@ public:
 	double number;
 
 	Constant(double value);
+	virtual ~Constant() = default;
 };
 

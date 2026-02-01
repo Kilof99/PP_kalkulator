@@ -9,5 +9,6 @@ public:
 	std::string toString();
 	Subtract(Expression* l, Expression* r);
 	Subtract(Subtract* origin);
+	virtual ~Subtract() = default;
 };
 

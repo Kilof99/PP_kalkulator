@@ -9,5 +9,6 @@ public:
 	std::string toString();
 	Divide(Expression* l, Expression* r);
 	Divide(Divide* origin);
+	virtual ~Divide() = default;
 };
 

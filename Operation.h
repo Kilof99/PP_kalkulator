@@ -7,5 +7,6 @@ public:
 	Expression* right;
 	Operation(Expression *l, Expression *r);
 	Operation(Operation *origin);
+	virtual ~Operation() = default;
 };
 
