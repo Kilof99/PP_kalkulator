@@ -1,7 +1,13 @@
 #pragma once
 #include "Expression.h"
-class Function: public Expression
+
+class Function : public Expression
 {
-	Expression argument;
+public:
+	Expression* argument;
+
+	Function(Expression* arg);
+	Function(Function* origin);
+	virtual ~Function() = default;
 };
 
