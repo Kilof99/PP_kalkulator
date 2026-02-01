@@ -9,6 +9,6 @@ public:
 	Expression* derivative();
 	Cos* copy();
 	std::string toString();
-	Cos(Expression* a);
+	Cos(Expression* arg);
 	Cos(Cos* origin);
 };

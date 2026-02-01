@@ -9,6 +9,6 @@ public:
 	Expression* derivative();
 	Sin* copy();
 	std::string toString();
-	Sin(Expression* a);
+	Sin(Expression* arg);
 	Sin(Sin* origin);
 };

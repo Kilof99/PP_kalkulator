@@ -9,6 +9,6 @@ public:
 	Expression* derivative();
 	Ctg* copy();
 	std::string toString();
-	Ctg(Expression* a);
+	Ctg(Expression* arg);
 	Ctg(Ctg* origin);
 };

@@ -4,7 +4,7 @@
 #include "Cos.h"
 #include "Constant.h"
 
-Sin::Sin(Expression* a) : Function(a) {}
+Sin::Sin(Expression* arg) : Function(arg) {}
 Sin::Sin(Sin* origin) : Function(origin) {}
 
 double Sin::value() {

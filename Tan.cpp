@@ -2,11 +2,10 @@
 #include <cmath>
 #include "Multiply.h"
 #include "Divide.h"
-#include "Multiply.h"
 #include "Cos.h"
 #include "Constant.h"
 
-Tan::Tan(Expression* a) : Function(a) {}
+Tan::Tan(Expression* arg) : Function(arg) {}
 Tan::Tan(Tan* origin) : Function(origin) {}
 
 double Tan::value() {
@@ -15,11 +14,13 @@ double Tan::value() {
 
 Expression* Tan::derivative() {
 	// d/dx tan(u) = (1 / cos^2(u)) * u'
-	Expression* cosCopy1 = new Cos(argument->copy());
-	Expression* cosCopy2 = new Cos(argument->copy());
-	Expression* denom = new Multiply(cosCopy1, cosCopy2);
-	Expression* sec2 = new Divide(new Constant(1), denom);
-	return new Multiply(argument->derivative(), sec2);
+	return new Divide(
+		argument->derivative(),
+		new Multiply(
+			new Cos(argument->copy()),
+			new Cos(argument->copy())
+		)
+	);
 }
 
 Tan* Tan::copy() {

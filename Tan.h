@@ -9,6 +9,6 @@ public:
 	Expression* derivative();
 	Tan* copy();
 	std::string toString();
-	Tan(Expression* a);
+	Tan(Expression* arg);
 	Tan(Tan* origin);
 };

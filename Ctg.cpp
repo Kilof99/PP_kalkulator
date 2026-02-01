@@ -5,7 +5,7 @@
 #include "Sin.h"
 #include "Constant.h"
 
-Ctg::Ctg(Expression* a) : Function(a) {}
+Ctg::Ctg(Expression* arg) : Function(arg) {}
 Ctg::Ctg(Ctg* origin) : Function(origin) {}
 
 double Ctg::value() {
@@ -14,11 +14,13 @@ double Ctg::value() {
 
 Expression* Ctg::derivative() {
 	// d/dx ctg(u) = -1 / sin^2(u) * u'
-	Expression* sinCopy1 = new Sin(argument->copy());
-	Expression* sinCopy2 = new Sin(argument->copy());
-	Expression* denom = new Multiply(sinCopy1, sinCopy2);
-	Expression* minusOneOverSin2 = new Multiply(new Constant(-1), new Divide(new Constant(1), denom));
-	return new Multiply(argument->derivative(), minusOneOverSin2);
+	return new Multiply(
+		argument->derivative(), 
+		new Divide(
+			new Constant(-1), 
+			new Multiply(new Sin(argument->copy()), new Sin(argument->copy()))
+		)
+	);
 }
 
 Ctg* Ctg::copy() {
