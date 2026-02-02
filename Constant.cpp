@@ -1,5 +1,5 @@
 /*
-Autor:  Pawe³  Pastusiak
+Autor:  Pawel  Pastusiak
 Indeks: 248829
 Grupa:  PT/N 13:15
 Temat:  Kalkulator wyrazen matematycznych i pochodnych
