@@ -1,4 +1,12 @@
-﻿#include <iostream>
+﻿/*
+Autor:  Paweł  Pastusiak
+Indeks: 248829
+Grupa:  PT/N 13:15
+Temat:  Kalkulator wyrazen matematycznych i pochodnych
+Data:  	02.02.2026
+*/
+
+#include <iostream>
 #include "Add.h"
 #include "Subtract.h"
 #include "Multiply.h"
