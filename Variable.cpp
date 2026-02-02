@@ -1,8 +1,10 @@
 #include "Variable.h"
 #include "Constant.h"
 
+double Variable::x = 1;
+
 double Variable::value() {
-	return 1;
+	return this->x;
 }
 
 Expression* Variable::derivative() {
