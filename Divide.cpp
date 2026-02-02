@@ -20,7 +20,7 @@ Divide* Divide::copy() {
 }
 
 std::string Divide::toString() {
-	return left->toString() + "/" + right->toString();
+	return "(" + left->toString() + "/" + right->toString() + ")";
 }
 
 Divide::Divide(Expression* l, Expression* r) : Operation(l, r) {}

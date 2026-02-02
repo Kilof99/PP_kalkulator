@@ -13,7 +13,7 @@ Subtract* Subtract::copy() {
 }
 
 std::string Subtract::toString() {
-	return left->toString() + "-" + right->toString();
+	return "(" + left->toString() + "-" + right->toString() + ")";
 }
 
 Subtract::Subtract(Expression* l, Expression* r) : Operation(l, r) {}

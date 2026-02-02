@@ -13,7 +13,7 @@ Add* Add::copy() {
 }
 
 std::string Add::toString() {
-	return left->toString()+"+"+right->toString();
+	return "(" + left->toString() + "+" + right->toString() + ")";
 }
 
 Add::Add(Expression *l, Expression *r) : Operation(l, r) {}
