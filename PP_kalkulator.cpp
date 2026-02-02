@@ -34,5 +34,6 @@ int main()
 
 
     delete expr;
+	system("pause");
     return 0;
 }
